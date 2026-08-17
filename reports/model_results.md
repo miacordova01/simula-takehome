@@ -1,13 +1,13 @@
 # CTR model: training and evaluation
 
-Loaded 1,000,000 rows in 1.0s
+Loaded 1,000,000 rows in 1.4s
 
 ## Building time-aware features
 
 Each day is encoded using only days strictly before it, mirroring a feature store rebuilt by a nightly batch job. Day 141021 is dropped because it has no history.
 ```
 ```
-Encoded 888,935 rows x 65 features in 31.7s
+Encoded 888,935 rows x 65 features in 32.3s
 - train 618,620 rows (CTR 0.1860)
 - valid 142,909 rows (CTR 0.1654)
 - test  127,406 rows (CTR 0.1714)
@@ -30,7 +30,7 @@ ece               0.0146
 
 ## Baseline 2: hashed logistic regression on raw categoricals
 
-trained in 128.7s on a 1,048,576-dim hashed space
+trained in 133.0s on a 1,048,576-dim hashed space
 ```
                    value
 n            127406.0000
@@ -165,5 +165,5 @@ no device features    0.7053        0.9137 0.0863    0.4186    -0.0051        -0
 ```
 
 ## Persisting artifacts
-- wrote `/Users/miacordova/Documents/Claude/Projects/simula-takehome/artifacts/model.txt` (94 trees)
-- wrote `/Users/miacordova/Documents/Claude/Projects/simula-takehome/artifacts/encoders.pkl`
+- wrote `artifacts/model.txt` (94 trees)
+- wrote `artifacts/encoders.pkl`

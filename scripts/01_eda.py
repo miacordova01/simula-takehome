@@ -47,8 +47,10 @@ def table(df: pd.DataFrame, floatfmt: str = "%.4f") -> None:
 def main() -> None:
     say("# Simula dataset EDA")
     say()
-    say(f"- impressions: `{IMPRESSIONS_CSV}`")
-    say(f"- characters:  `{CHARACTERS_CSV}`")
+    # Filenames only -- absolute paths would bake this machine's home directory
+    # into a committed report.
+    say(f"- impressions: `{IMPRESSIONS_CSV.name}`")
+    say(f"- characters:  `{CHARACTERS_CSV.name}`")
 
     imp = load_impressions()
     chars = load_characters()

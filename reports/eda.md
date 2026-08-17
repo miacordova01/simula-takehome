@@ -1,7 +1,7 @@
 # Simula dataset EDA
 
-- impressions: `/Users/miacordova/Downloads/impressions.csv`
-- characters:  `/Users/miacordova/Downloads/characters.csv`
+- impressions: `impressions.csv`
+- characters:  `characters.csv`
 
 ## Shape and target
 

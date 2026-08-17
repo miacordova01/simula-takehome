@@ -318,8 +318,11 @@ def main() -> None:
             },
             f,
         )
-    say(f"- wrote `{ARTIFACTS/'model.txt'}` ({gbm.best_iteration} trees)")
-    say(f"- wrote `{ARTIFACTS/'encoders.pkl'}`")
+    # Repo-relative -- absolute paths would bake this machine's home directory
+    # into a committed report.
+    rel = ARTIFACTS.relative_to(ROOT)
+    say(f"- wrote `{rel/'model.txt'}` ({gbm.best_iteration} trees)")
+    say(f"- wrote `{rel/'encoders.pkl'}`")
 
     np.save(ARTIFACTS / "test_preds.npy", p_te)
     meta.loc[te].to_parquet(ARTIFACTS / "test_meta.parquet")
