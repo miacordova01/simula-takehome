@@ -49,6 +49,7 @@ run scripts/04_ranking.py
 run scripts/05_coldstart.py
 run scripts/06_drift.py
 run scripts/07_serving_bench.py
+run scripts/08_sample_output.py
 
 echo ""
 echo "Done. Reports written to reports/:"
